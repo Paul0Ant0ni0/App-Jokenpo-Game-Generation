@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Jokenpo Game</string>
+    <string name="botao_tesoura" />
+    <string name="botao_pedra" />
+    <string name="botao_paple" />
+    <string name="title">Escolha uma opção!</string>
+</resources>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/jokenpo_game"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="263dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="140dp"
+                android:background="#B3009A"
+                android:fontFamily="casual"
+                android:hint="@string/title"
+                android:shadowColor="#26F4BA"
+                android:textAlignment="center"
+                android:textColorHint="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/pontosMaquina"
+                app:layout_constraintStart_toStartOf="@+id/pontosJogador"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="236dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="176dp"
+                android:layout_marginEnd="72dp"
+                android:src="@drawable/start_game"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.844"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gifImageView2" />
+
+            <ImageButton
+                android:id="@+id/btn_pedra"
+                android:layout_width="96sp"
+                android:layout_height="95sp"
+                android:layout_marginStart="-21dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/botao_pedra"
+                android:scaleType="fitStart"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:srcCompat="@drawable/pedra"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/btn_papel"
+                android:layout_width="96dp"
+                android:layout_height="95dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/botao_tesoura"
+                android:scaleType="fitStart"
+                app:layout_constraintEnd_toStartOf="@+id/btn_tesoura"
+                app:layout_constraintHorizontal_bias="0.437"
+                app:layout_constraintStart_toEndOf="@+id/btn_pedra"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:srcCompat="@drawable/papel"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/btn_tesoura"
+                android:layout_width="96dp"
+                android:layout_height="95dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="-21dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/botao_paple"
+                android:scaleType="fitStart"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:srcCompat="@drawable/tesoura"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/jogador"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="52dp"
+                android:hint="Jogador: "
+                android:textAlignment="center"
+                android:textColorHint="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/gifImageView"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="-20dp"
+                android:hint="Maquina:"
+                android:textColorHint="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+            <TextView
+                android:id="@+id/pontosJogador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="@+id/jogador"
+                app:layout_constraintStart_toStartOf="@+id/jogador" />
+
+            <TextView
+                android:id="@+id/pontosMaquina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="@+id/textView6"
+                app:layout_constraintStart_toStartOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/result_jogador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="22dp"
+                android:hint="Resultado"
+                android:textColor="#00BCD4"
+                android:textColorHint="#FFC107"
+                app:layout_constraintEnd_toEndOf="@+id/jogador"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/gifImageView"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+            <TextView
+                android:id="@+id/result_maquina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Resultado"
+                android:textColor="#00BCD4"
+                android:textColorHint="#FFC107"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView"
+                app:layout_constraintVertical_bias="0.727" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="67dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:hint="Rodadas"
+                android:textAlignment="center"
+                android:textColor="#FDFCFC"
+                android:textColorHint="#FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/result_maquina"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/result_jogador"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+            <TextView
+                android:id="@+id/rodadas"
+                android:layout_width="64dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="7"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toStartOf="@+id/pontosMaquina"
+                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintStart_toEndOf="@+id/pontosJogador"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintVertical_bias="0.688" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
